@@ -6,8 +6,10 @@
     <ul class="nav">
       {% for name, label in navigation_links.items %}
       <li>
-        {% if request.resolver_match.view_name == name %}
-        <strong>{{ label }}</strong>
+        {% if name == '' %}
+        {{ label }}
+        {% elif request.resolver_match.view_name == name %}
+        <strong><a href="{% url name %}">{{ label }}</a></strong>
         {% else %}
         <a href="{% url name %}">{{ label }}</a>
         {% endif %}
