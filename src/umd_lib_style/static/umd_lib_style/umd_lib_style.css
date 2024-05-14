@@ -88,6 +88,7 @@ expands to fill the remaining space.
     grid-template-rows: 100%;
     grid-template-columns: auto auto 1fr;
     align-items: center;
+    justify-items: end;
 }
 .banner>* {
     vertical-align: middle;
