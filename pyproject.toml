@@ -1,6 +1,6 @@
 [project]
 name = "django-umd-lib-style"
-version = "1.0.0-dev"
+version = "1.0.0"
 dependencies = [
     "django>=4.2",
 ]
