@@ -5,7 +5,7 @@ Django app that provides theming for UMD Libraries applications.
 ## Installation
 
 ```zsh
-pip install "git+https://github.com/umd-lib/django-umd-lib-style.git@main"
+pip install django-umd-lib-style
 ```
 
 ## Setup
