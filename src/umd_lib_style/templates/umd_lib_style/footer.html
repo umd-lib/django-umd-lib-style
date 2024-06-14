@@ -1,0 +1,16 @@
+{% load static %}
+<div>
+    <span class="version">{{ application_name }} version {{ application_version }}</span> &middot;
+
+    {% for name, label in footer_links.items %}
+    {% if name == '' %}
+    {{ label }}
+    {% elif request.resolver_match.view_name == name %}
+    <strong><a href="{% url name %}">{{ label }}</a></strong>
+    {% else %}
+    <a class="footer" href="{% url name %}">{{ label }}</a>
+    {% endif %}
+    {% endfor %}
+
+    <a href="https://umd.edu/web-accessibility">Web Accessibility</a>
+</div>
