@@ -144,6 +144,7 @@ footer {
     padding: 1em var(--footer-horizontal-spacing);
     background-color: var(--light-gray);
     border-top: 1px solid var(--medium-gray);
+    display: inline-block;
     text-align: right;
     color: var(--dark-gray);
 }
@@ -152,7 +153,9 @@ footer {
 table {
     border-collapse: collapse;
 }
-th, td {
+
+th,
+td {
     border: 1px solid var(--table-border-color);
     padding: .5em;
 }
@@ -249,14 +252,20 @@ summary>* {
 Includes standardized button class names of "create", "edit", "update", and "delete".
 
 */
-button, select, input, textarea {
+button,
+select,
+input,
+textarea {
     padding: .25em .5em;
     font-family: var(--body-font-family);
     font-size: 1em;
     border: 1px solid;
     border-radius: 5px;
 }
-input, select, textarea {
+
+input,
+select,
+textarea {
     border-color: var(--dark-gray);
 }
 

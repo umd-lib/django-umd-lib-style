@@ -31,10 +31,7 @@
       {% block main %}{% endblock %}
     </main>
     <footer>
-      <div>
-        <span class="version">{{ application_name }} version {{ application_version }}</span> &middot;
-        <a href="https://umd.edu/web-accessibility">Web Accessibility</a>
-      </div>
+      {% include 'umd_lib_style/footer.html' %}
     </footer>
   </body>
 </html>
