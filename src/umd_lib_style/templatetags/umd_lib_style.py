@@ -6,6 +6,7 @@ register = template.Library()
 
 ENVIRONMENT_LABELS = {
     'development': 'Local Environment',
+    'sandbox': 'Sandbox Environment',
     'test': 'Test Environment',
     'qa': 'QA Environment',
 }

@@ -85,6 +85,7 @@ all of your templates:
 * `application_name` (str)
 * `application_version` (str)
 * `navigation_links` (dict)
+* `footer_links` (dict)
 
 Many of these are controlled by settings from your `settings.py` file.
 
@@ -94,7 +95,8 @@ There are some additional values you should set in your `settings.py`:
 
 ### `PROJECT_PACKAGE_NAME`
 
-Default value: `None`
+- Type: String
+- Default value: `None`
 
 The application version is taken from this package's version using
 `importlib.metadata.version(PROJECT_PACKAGE_NAME)`. That version is
@@ -102,28 +104,42 @@ available in templates as `application_version`.
 
 ### `APPLICATION_NAME`
 
-Default value: `"App"`
+- Type: String
+- Default value: `"App"`
 
 Application name to be displayed in the header and footer. Available in
 templates as `application_name`.
 
 ### `NAVIGATION_LINKS`
 
-Default value: `{}`
+- Type: Dictionary or string
+- Default value: `{}`
 
 Dictionary mapping view names to labels. It is used to generate the
 navigation links in the header. Available in templates as `navigation_links`.
 
+If a string is given, it is interpreted as the fully qualified name for a 
+callable that will be run to generate the navigation links dictionary at 
+request time. It must accept a single argument, a `django.http.HttpRequest`
+object representing the current request.
+
 ### `FOOTER_LINKS`
 
-Default value: `{}`
+- Type: Dictionary or string
+- Default value: `{}`
 
 Dictionary mapping view names to labels. It is used to generate the
 navigation links in the footer. Available in templates as `footer_links`.
 
+If a string is given, it is interpreted as the fully qualified name for a
+callable that will be run to generate the navigation links dictionary at
+request time. It must accept a single argument, a `django.http.HttpRequest`
+object representing the current request.
+
 ### `ENVIRONMENT`
 
-Default value: `"development"`
+- Type: String
+- Default value: `"development"`
 
 Used to trigger the display of the standard environment banner at the top
 of every page. Should be one of `"development"`, `"test"`, or `"qa"`. Any
