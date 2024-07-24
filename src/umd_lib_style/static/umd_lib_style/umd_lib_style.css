@@ -194,6 +194,10 @@ Full header layout, with environment banner:
     background-color: green;
     color: white;
 }
+.sandbox.environment-banner {
+    background-color: tan;
+    color: black;
+}
 .test.environment-banner {
     background-color: #fff100;
     color: black;
