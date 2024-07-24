@@ -1,7 +1,7 @@
 [project]
 name = "django-umd-lib-style"
 description = "Django app that provides theming for UMD Libraries applications"
-version = "1.0.1"
+version = "1.1.0"
 dependencies = [
     "django>=4.2",
 ]
