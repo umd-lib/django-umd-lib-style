@@ -72,6 +72,13 @@ body {
     font-style: normal;
 }
 
+/* Add some margin on the bottom of these elements */
+li,
+form,
+table {
+  margin: 0 0 0.5em 0;
+}
+
 /* Banner layout is:
 
     [logo][app name][            navigation]
@@ -314,6 +321,70 @@ button.delete:hover {
     border-color: var(--danger-shaded);
 }
 
+button.login,
+button.publish {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+button.login:hover,
+button.publish:hover {
+  background-color: var(--success-shaded);
+  border-color: var(--success-shaded);
+  color: white;
+}
+
+/* Button-like styling for anchor tags */
+.link-button {
+    display: block;
+    padding: 0.25em 0.5em;
+    font-family: var(--body-font-family);
+    font-size: 1em;
+    border: 1px solid;
+    border-radius: 5px;
+    text-decoration: none; /* no underline */
+    color: inherit;
+    width: max-content;
+}
+
+.link-button:hover {
+    background-color: var(--medium-gray-shaded);
+    border-color: var(--medium-gray-shaded);
+    cursor: pointer;
+}
+
+.link-button--edit {
+    background-color: var(--info);
+    border-color: var(--info);
+    color: black;
+}
+.link-button--delete {
+    background-color: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
+
+.link-button--create,
+.link-button--update {
+    background-color: var(--success);
+    border-color: var(--success);
+    color: white;
+}
+
+.link-button--create:hover,
+.link-button--update:hover {
+    background-color: var(--success-shaded);
+    border-color: var(--success-shaded);
+}
+.link-button--edit:hover {
+    background-color: var(--info-shaded);
+    border-color: var(--info-shaded);
+}
+.link-button--delete:hover {
+    background-color: var(--danger-shaded);
+    border-color: var(--danger-shaded);
+}
+
 /* Form errors */
 .errorlist {
     padding: 0;
@@ -326,4 +397,22 @@ button.delete:hover {
 }
 .errorlist li:before {
     content: '❗ ';
+}
+
+/* SAML Login Required notice */
+.notice {
+    margin: 0 auto;
+    width: fit-content;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    text-align: center;
+}
+.notice > h1 {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0.25em;
+    border-bottom: 1px solid var(--light-gray);
+}
+.notice > p {
+    margin: 1em;
 }
