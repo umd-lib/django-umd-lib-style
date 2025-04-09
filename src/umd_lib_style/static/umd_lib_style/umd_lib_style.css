@@ -36,6 +36,15 @@
 
     --table-background-color: #fcfcfc;
     --table-border-color: var(--medium-gray);
+
+    /* for rounded UI elements */
+    --rounded-border-radius: 5px;
+
+    /* for form and form-like controls */
+    --widget-padding: .25em .5em;
+    --widget-font-size: 1em;
+    --widget-border-width: 1px;
+    --widget-border-style: solid;
 }
 
 /* Body layout is:
@@ -264,14 +273,16 @@ Includes standardized button class names of "create", "edit", "update", and "del
 
 */
 button,
+a.button,
 select,
 input,
 textarea {
-    padding: .25em .5em;
+    padding: var(--widget-padding);
     font-family: var(--body-font-family);
-    font-size: 1em;
-    border: 1px solid;
-    border-radius: 5px;
+    font-size: var(--widget-font-size);
+    border-width: var(--widget-border-width);
+    border-style: var(--widget-border-style);
+    border-radius: var(--rounded-border-radius);
 }
 
 input,
@@ -285,105 +296,110 @@ button {
     background-color: var(--medium-gray);
     border-color: var(--medium-gray);
     color: white;
+    cursor: pointer;
 }
+/* Additional classes to enforce button-like styling for anchor tags */
+a.button {
+    display: inline-block;
+    text-decoration: none; /* no underline */
+    width: max-content;
+    background-color: white;
+    border-color: var(--dark-gray);
+    color: var(--dark-gray);
+}
+button:hover,
+a.button:hover {
+    background-color: var(--medium-gray-shaded);
+    border-color: var(--medium-gray-shaded);
+    color: white;
+}
+
+/* Create button */
 button.create,
-button.update {
+a.button.create
+{
     background-color: var(--success);
     border-color: var(--success);
     color: white;
 }
-button.edit {
+button.create:hover,
+a.button.create:hover
+{
+    background-color: var(--success-shaded);
+    border-color: var(--success-shaded);
+}
+
+/* Update button */
+button.update,
+a.button.update {
+    background-color: var(--success);
+    border-color: var(--success);
+    color: white;
+}
+button.update:hover,
+a.button.update:hover
+{
+    background-color: var(--success-shaded);
+    border-color: var(--success-shaded);
+}
+
+/* Edit button */
+button.edit,
+a.button.edit
+{
     background-color: var(--info);
     border-color: var(--info);
     color: black;
 }
-button.delete {
+button.edit:hover,
+a.button.edit:hover
+{
+    background-color: var(--info-shaded);
+    border-color: var(--info-shaded);
+    color: white;
+}
+
+/* Delete button */
+button.delete,
+a.button.delete
+{
     background-color: var(--danger);
     border-color: var(--danger);
     color: white;
 }
-button:hover {
-    background-color: var(--medium-gray-shaded);
-    border-color: var(--medium-gray-shaded);
-    cursor: pointer;
-}
-button.create:hover,
-button.update:hover {
-    background-color: var(--success-shaded);
-    border-color: var(--success-shaded);
-}
-button.edit:hover {
-    background-color: var(--info-shaded);
-    border-color: var(--info-shaded);
-}
-button.delete:hover {
+button.delete:hover,
+a.button.delete:hover
+{
     background-color: var(--danger-shaded);
     border-color: var(--danger-shaded);
 }
 
+/* Login button */
 button.login,
-button.publish {
+a.button.login {
   background-color: var(--success);
   border-color: var(--success);
   color: white;
 }
 button.login:hover,
-button.publish:hover {
+a.button.login:hover {
   background-color: var(--success-shaded);
   border-color: var(--success-shaded);
+}
+
+/* Publish button */
+button.publish,
+a.button.publish {
+  background-color: var(--success);
+  border-color: var(--success);
   color: white;
 }
-
-/* Button-like styling for anchor tags */
-.link-button {
-    display: block;
-    padding: 0.25em 0.5em;
-    font-family: var(--body-font-family);
-    font-size: 1em;
-    border: 1px solid;
-    border-radius: 5px;
-    text-decoration: none; /* no underline */
-    color: inherit;
-    width: max-content;
+button.publish:hover,
+a.button.publish:hover {
+  background-color: var(--success-shaded);
+  border-color: var(--success-shaded);
 }
 
-.link-button:hover {
-    background-color: var(--medium-gray-shaded);
-    border-color: var(--medium-gray-shaded);
-    cursor: pointer;
-}
-
-.link-button--edit {
-    background-color: var(--info);
-    border-color: var(--info);
-    color: black;
-}
-.link-button--delete {
-    background-color: var(--danger);
-    border-color: var(--danger);
-    color: white;
-}
-
-.link-button--create,
-.link-button--update {
-    background-color: var(--success);
-    border-color: var(--success);
-    color: white;
-}
-
-.link-button--create:hover,
-.link-button--update:hover {
-    background-color: var(--success-shaded);
-    border-color: var(--success-shaded);
-}
-.link-button--edit:hover {
-    background-color: var(--info-shaded);
-    border-color: var(--info-shaded);
-}
-.link-button--delete:hover {
-    background-color: var(--danger-shaded);
-    border-color: var(--danger-shaded);
-}
 
 /* Form errors */
 .errorlist {
