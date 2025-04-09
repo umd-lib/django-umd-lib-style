@@ -296,6 +296,25 @@ summary>* {
     margin: 0;
 }
 
+/* Forms
+
+The `button` class should be applied to forms whose only visible control is a
+single button. This class makes the form render as an inline-block element so
+it can be placed alongside links or other inline content.
+
+These forms will typically have one or more hidden fields. The single button
+will usually have an action class (see "Form controls" below)
+
+    form.button
+        (input@type=hidden)*
+        button.{action}
+
+*/
+form.button {
+    display: inline-block;
+    margin: 0;
+}
+
 /* Form controls
 
 Includes standardized button class names of "create", "edit", "update", and "delete".
