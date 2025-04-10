@@ -155,12 +155,12 @@ layout. They are all applied using the `:root` pseudo-element. See
 [umd_lib_style.css](src/umd_lib_style/static/umd_lib_style/umd_lib_style.css)
 for the full list.
 
-### Semantic Classes
+### Button Styles
 
 In addition to providing basic thematic and layout styling in accordance
 with UMD's brand guidelines and the design of the UMD Libraries' other web
 UIs, the included CSS also provides some semantic classes for styling
-individual `button` elements.
+individual `button` or `a.button` elements.
 
 | Class name | Use for buttons that ...                                    |
 |------------|-------------------------------------------------------------|
@@ -168,6 +168,25 @@ individual `button` elements.
 | `edit`     | ... display a form or other method of modifying a resource. |
 | `update`   | ... immediately save an already existing resource.          |
 | `delete`   | ... immediately remove a resource.                          |
+| `login`    | ... send the user to a login form.                          |
+| `publish`  | ... immediately publish a resource.                         |
+
+### Form Styles
+
+For forms that consist of a single button (plus, optionally, one or more 
+hidden fields), use the `.button` class on the `form` element to display 
+that form as an inline element. This allows it, for instance, to sit in 
+the regular content flow next to links or other inline content. 
+
+### Table Styles
+
+There are two included table styles that can be selected by adding one of 
+these classes to the `table` element:
+
+| Class name | Description                                                                |
+|------------|----------------------------------------------------------------------------|
+| `grid`     | Full borders around all cells, zebra striping, dark background for headers |
+| `lined`    | Only a single line between rows, headers bold                              |
 
 ## License
 
