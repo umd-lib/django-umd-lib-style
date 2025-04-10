@@ -12,12 +12,12 @@ authors = [
     { name="Tim Kanke", email="tkanke@umd.edu" },
 ]
 readme = "README.md"
+license = "Apache-2.0"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3 :: Only",
     "Framework :: Django",
     "Operating System :: OS Independent",
-    "License :: OSI Approved :: Apache Software License",
 ]
 
 [project.optional-dependencies]
